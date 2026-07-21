@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext'
 import contact from '../data/contact'
-import { BeeHexSticker } from './Stickers'
 
 export default function Footer() {
   const { t, lang } = useLang()
@@ -10,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
-            <BeeHexSticker className="h-8 w-8" />
+            <img src="/brand-mark.png" alt="" className="h-8 w-8" />
             <span className="font-display text-lg font-extrabold">
               {lang === 'ar' ? 'بي إديوكيشن' : 'Bee Education'}
             </span>

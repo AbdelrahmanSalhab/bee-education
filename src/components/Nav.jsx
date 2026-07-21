@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext'
-import { BeeHexSticker } from './Stickers'
 
 const linkClass = ({ isActive }) =>
   `rounded-full px-3 py-1.5 font-display text-sm font-bold transition-colors sm:text-base ${
@@ -13,7 +12,7 @@ export default function Nav() {
     <header className="sticky top-0 z-40 border-b-2 border-ink/10 bg-board/85 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <BeeHexSticker className="h-9 w-9 -rotate-6" />
+          <img src="/brand-mark.png" alt="" className="h-9 w-9" />
           <span className="font-display text-lg font-extrabold leading-none sm:text-xl">
             {lang === 'ar' ? 'بي إديوكيشن' : 'Bee Education'}
           </span>
