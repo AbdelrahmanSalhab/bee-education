@@ -32,11 +32,8 @@ function Hero() {
           alt="BEE — Here to Be"
           className="h-44 w-auto sm:h-56"
         />
-        <span className="font-display text-3xl font-extrabold sm:text-4xl">
+        <h1 className="font-display text-4xl font-extrabold sm:text-5xl">
           {lang === 'ar' ? 'بي إديوكيشن' : 'Bee Education'}
-        </span>
-        <h1 className="mx-auto max-w-3xl font-display text-4xl font-extrabold leading-[1.15] sm:text-6xl">
-          {t.hero.title}
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-ink-soft sm:text-xl">{t.hero.sub}</p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
