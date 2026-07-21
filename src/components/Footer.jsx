@@ -37,6 +37,17 @@ export default function Footer() {
           </a>
           <div className="mt-2 flex items-center gap-3">
             <a
+              href={contact.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-board/30 text-board/80 transition-colors hover:border-honey hover:text-honey"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
+                <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.6v3H11v7h2.5z" />
+              </svg>
+            </a>
+            <a
               href={contact.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
