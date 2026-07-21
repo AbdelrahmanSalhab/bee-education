@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Tabletop world: cardstock board, cocoa ink, honey + game-piece accents */
+  --color-board: #fbf3e2;
+  --color-card: #fffdf6;
+  --color-ink: #3b2a1e;
+  --color-ink-soft: #7d6b58;
+  --color-honey: #f5b301;
+  --color-honey-deep: #d89a00;
+  --color-meeple-red: #e4572e;
+  --color-meeple-teal: #17847b;
+  --color-meeple-blue: #3d5a9e;
+
+  --font-display: "Baloo Bhaijaan 2", "Rubik", sans-serif;
+  --font-body: "Rubik", system-ui, sans-serif;
+
+  /* Hard offset shadows = punched cardboard tokens, not soft UI cards */
+  --shadow-token: 5px 5px 0 0 var(--color-ink);
+  --shadow-token-sm: 3px 3px 0 0 var(--color-ink);
+
+  --animate-marquee: marquee 32s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-board);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: var(--color-honey);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-meeple-blue);
+    outline-offset: 2px;
+  }
+}
