@@ -29,7 +29,7 @@ function Hero() {
       <Reveal className="flex flex-col items-center gap-6">
         <img
           src="/brand-logo.png"
-          alt="BEE — Here to Be"
+          alt="BEE"
           className="h-44 w-auto sm:h-56"
         />
         <h1 className="font-display text-4xl font-extrabold sm:text-5xl">
