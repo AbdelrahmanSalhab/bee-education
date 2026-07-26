@@ -1,14 +1,18 @@
 export default {
   nav: {
     home: 'Home',
-    offerings: 'Our events',
+    events: 'Our events',
+    about: 'About us',
+    gallery: 'Gallery',
+    faq: 'FAQ',
+    contact: 'Contact',
     cta: 'Book an event',
   },
   hero: {
     eyebrow: 'Learning through board games — Jerusalem',
     title: 'Learning through play, one board game at a time.',
     sub: 'Bee Education is the first Arab company in Jerusalem specializing in non-formal education through board games. We design and run facilitated events for schools, youth organizations, camps, companies, and community centers — because learning works best when it’s fun.',
-    ctaPrimary: 'Explore our events',
+    ctaPrimary: 'See our events',
     ctaSecondary: 'See the photos',
   },
   offer: {
@@ -16,19 +20,19 @@ export default {
     heading: 'Pick your play style',
     items: [
       {
+        icon: 'trophy',
+        title: 'Happy Hour for organizations',
+        text: 'Fun and training activities for work teams.',
+      },
+      {
         icon: 'meeple',
-        title: 'Skill-building workshops',
-        text: 'Facilitated sessions where board games become hands-on training in thinking, leadership, communication, teamwork, and problem-solving.',
+        title: 'Life skills for schools',
+        text: 'Training activities that build students’ life skills.',
       },
       {
         icon: 'die',
-        title: 'Schools, camps & youth programs',
-        text: 'Educational game activities designed for schools, summer camps, youth organizations, and community centers — matched to every age group.',
-      },
-      {
-        icon: 'trophy',
-        title: 'Company & café events',
-        text: 'Game nights, team events, and tournaments for companies — plus fun public game events in cafés and restaurants.',
+        title: 'School fun days',
+        text: 'Escape rooms, Mafia, treasure hunts, and more.',
       },
     ],
   },
@@ -75,36 +79,12 @@ export default {
   offerings: {
     eyebrow: 'Our events',
     heading: 'Events built for your group',
-    sub: 'Every event is run by our facilitators, with games matched to your group’s age, size, and goals — from classrooms to boardrooms.',
-    packagesHeading: 'Event packages',
-    packages: [
-      {
-        name: 'Game Night',
-        tag: 'Most popular',
-        duration: '2–3 hours',
-        size: 'Up to 30 people',
-        text: 'An open play session with a curated game library and hosted tables — for companies, community centers, cafés, and restaurants.',
-        includes: ['40+ game library', 'Two facilitators', 'Setup included', 'Beginner-friendly picks'],
-        price: 'Contact us',
-      },
-      {
-        name: 'Skills Lab',
-        tag: 'For learning',
-        duration: 'Half day',
-        size: '8–25 people',
-        text: 'A facilitated training where games build thinking, leadership, communication, teamwork, and problem-solving — with a guided debrief.',
-        includes: ['Goal-matched games', 'Lead trainer', 'Skills debrief session', 'Follow-up notes'],
-        price: 'Contact us',
-      },
-      {
-        name: 'The Tournament',
-        tag: 'Go big',
-        duration: 'Full day',
-        size: '30–150 people',
-        text: 'A full-scale championship for schools, camps, or companies: brackets, scoreboards, referees, and a trophy someone will keep forever.',
-        includes: ['Bracket & scoreboard', 'Referee crew', 'Prizes & trophy', 'Photo coverage'],
-        price: 'Contact us',
-      },
+    sub: 'Every event is designed around your group and hosted indoors, at centers and similar venues.',
+    facts: [
+      { icon: 'bee', text: 'Ages 12 and up' },
+      { icon: 'meeple', text: 'Youth, women, and seniors' },
+      { icon: 'die', text: 'Board games and group challenges' },
+      { icon: 'cards', text: 'Hands-on and theory training with board games' },
     ],
     howHeading: 'How it works',
     howEyebrow: 'Your move',
@@ -126,14 +106,14 @@ export default {
       },
       {
         q: 'Which ages do you work with?',
-        a: 'All of them. We design activities for children, youth, and adults, and match the games to each group.',
+        a: 'Our events are for ages 12 and up — youth, women, and seniors — with games matched to each group.',
       },
     ],
   },
   footer: {
     blurb: 'Non-formal education through board games — workshops, school and youth programs, company events, and tournaments in Jerusalem.',
     contactHeading: 'Say hello',
-    pagesHeading: 'Pages',
+    pagesHeading: 'Sections',
     rights: 'All rights reserved.',
   },
 }

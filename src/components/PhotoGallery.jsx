@@ -55,9 +55,6 @@ export default function PhotoGallery() {
             ) : (
               <PlaceholderTile index={i} />
             )}
-            <p className="border-t-2 border-ink/10 px-4 py-3 font-display text-sm font-bold">
-              {t.gallery.captions[i] ?? ''}
-            </p>
           </TokenCard>
         ))}
       </div>

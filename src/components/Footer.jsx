@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext'
 import contact from '../data/contact'
+import sections from '../data/sections'
 
 export default function Footer() {
   const { t, lang } = useLang()
@@ -19,12 +19,11 @@ export default function Footer() {
 
         <div className="flex flex-col gap-2">
           <h3 className="font-display font-bold text-honey">{t.footer.pagesHeading}</h3>
-          <Link to="/" className="w-fit text-sm text-board/80 hover:text-honey">
-            {t.nav.home}
-          </Link>
-          <Link to="/offerings" className="w-fit text-sm text-board/80 hover:text-honey">
-            {t.nav.offerings}
-          </Link>
+          {sections.map(({ id, key }) => (
+            <a key={id} href={`#${id}`} className="w-fit text-sm text-board/80 hover:text-honey">
+              {t.nav[key]}
+            </a>
+          ))}
         </div>
 
         <div className="flex flex-col gap-2">

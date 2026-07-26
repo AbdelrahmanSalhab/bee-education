@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext'
 import BoardTrack from '../components/BoardTrack'
 import About from '../components/About'
 import ClientLogos from '../components/ClientLogos'
 import PhotoGallery from '../components/PhotoGallery'
+import HowItWorks from '../components/HowItWorks'
+import Faq from '../components/Faq'
 import CTA from '../components/CTA'
 import SectionHeading from '../components/SectionHeading'
 import { Float, Reveal, TokenCard } from '../components/motion'
@@ -12,7 +13,7 @@ import { DieSticker, MeepleSticker, CardsSticker, BeeHexSticker, stickerByName }
 function Hero() {
   const { t, lang } = useLang()
   return (
-    <section className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 text-center sm:px-6 sm:pt-24">
+    <section id="home" className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 text-center sm:px-6 sm:pt-24">
       <Float className="absolute start-4 top-10 hidden md:block" rotate={7} duration={7}>
         <DieSticker className="h-20 w-20" pipColor="var(--color-meeple-teal)" />
       </Float>
@@ -37,12 +38,12 @@ function Hero() {
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-ink-soft sm:text-xl">{t.hero.sub}</p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            to="/offerings"
+          <a
+            href="#events"
             className="rounded-full border-2 border-ink bg-honey px-8 py-3 font-display text-lg font-bold shadow-token transition-transform hover:-translate-y-1"
           >
             {t.hero.ctaPrimary}
-          </Link>
+          </a>
           <a
             href="#gallery"
             className="rounded-full border-2 border-ink bg-card px-8 py-3 font-display text-lg font-bold shadow-token-sm transition-transform hover:-translate-y-1"
@@ -58,9 +59,25 @@ function Hero() {
 function Offer() {
   const { t } = useLang()
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-      <SectionHeading eyebrow={t.offer.eyebrow} heading={t.offer.heading} />
-      <div className="mt-12 grid gap-8 md:grid-cols-3">
+    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+      <SectionHeading eyebrow={t.offerings.eyebrow} heading={t.offerings.heading} sub={t.offerings.sub} />
+
+      <Reveal className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {t.offerings.facts.map((fact) => {
+          const Sticker = stickerByName[fact.icon]
+          return (
+            <div
+              key={fact.text}
+              className="flex items-center gap-3 rounded-2xl border-2 border-dashed border-ink/25 bg-honey/10 px-4 py-3"
+            >
+              <Sticker className="h-9 w-9 shrink-0 -rotate-6" />
+              <p className="text-sm font-medium">{fact.text}</p>
+            </div>
+          )
+        })}
+      </Reveal>
+
+      <div className="mt-10 grid gap-8 md:grid-cols-3">
         {t.offer.items.map((item, i) => {
           const Sticker = stickerByName[item.icon]
           return (
@@ -73,30 +90,36 @@ function Offer() {
               <Sticker className="h-14 w-14 -rotate-6" />
               <h3 className="font-display text-2xl font-bold">{item.title}</h3>
               <p className="text-ink-soft">{item.text}</p>
-              <Link to="/offerings" className="mt-auto font-display font-bold text-meeple-teal hover:underline">
-                {t.hero.ctaPrimary} <span className="inline-block rtl:-scale-x-100">→</span>
-              </Link>
             </TokenCard>
           )
         })}
       </div>
-    </section>
+    </div>
   )
 }
 
+// Everything lives on one page; each `id` below is a nav destination.
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <BoardTrack />
       <div className="relative">
         <Hero />
-        <Offer />
-        <About />
-        <ClientLogos />
-        <div id="gallery">
+        <section id="events">
+          <Offer />
+          <HowItWorks />
+        </section>
+        <section id="about">
+          <About />
+          <ClientLogos />
+        </section>
+        <section id="gallery">
           <PhotoGallery />
-        </div>
-        <CTA />
+        </section>
+        <Faq />
+        <section id="contact">
+          <CTA />
+        </section>
       </div>
     </div>
   )
