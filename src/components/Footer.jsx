@@ -73,8 +73,19 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-board/15 py-4 text-center text-xs text-board/50">
-        © {new Date().getFullYear()} Bee Education — {t.footer.rights}
+      <div className="flex flex-col items-center gap-1 border-t border-board/15 py-4 text-center">
+        <p className="text-xs text-board/50">
+          © {new Date().getFullYear()} Bee Education — {t.footer.rights}
+        </p>
+        <a
+          href="https://github.com/AbdelrahmanSalhab"
+          target="_blank"
+          rel="noopener noreferrer"
+          dir="ltr"
+          className="font-hand text-xl leading-none text-board/60 transition-colors hover:text-honey"
+        >
+          Made by Abdelrahman
+        </a>
       </div>
     </footer>
   )
