@@ -9,9 +9,9 @@ export default {
     cta: 'Book an event',
   },
   hero: {
-    eyebrow: 'Learning through board games — Jerusalem',
+    eyebrow: 'Learning through board games in Jerusalem',
     title: 'Learning through play, one board game at a time.',
-    sub: 'Bee Education is the first Arab company in Jerusalem specializing in non-formal education through board games. We design and run facilitated events for schools, youth organizations, camps, companies, and community centers — because learning works best when it’s fun.',
+    sub: 'Bee Education is the first Arab company in Jerusalem specializing in non-formal education through board games. We design and run facilitated events for schools, youth organizations, camps, companies, and community centers, because learning works best when it’s fun.',
     ctaPrimary: 'See our events',
     ctaSecondary: 'See the photos',
   },
@@ -41,7 +41,7 @@ export default {
     heading: 'The first of its kind in Jerusalem',
     body: [
       'Bee Education is the first Arab company in Jerusalem specializing in non-formal education using board games. We believe learning is most effective when it’s fun and interactive, so we design and deliver trainings and activities that develop thinking, leadership, communication, teamwork, problem-solving, and more.',
-      'We serve schools, youth organizations, summer camps, companies, and community centers, and we design educational and recreational events for every age group — alongside fun game events in cafés and restaurants.',
+      'We serve schools, youth organizations, summer camps, companies, and community centers, and we design educational and recreational events for every age group, alongside fun game events in cafés and restaurants.',
     ],
     founderEyebrow: 'The founder',
     founderName: 'Hamza Al-Natsheh',
@@ -58,7 +58,7 @@ export default {
   gallery: {
     eyebrow: 'From the game table',
     heading: 'Moments from our events',
-    sub: 'Snapshots from recent sessions — schools, camps, companies, and community spaces.',
+    sub: 'Snapshots from recent sessions in schools, camps, companies, and community spaces.',
     captions: [
       'A facilitated card game session',
       'Teamwork wins the round',
@@ -72,7 +72,7 @@ export default {
   },
   cta: {
     title: 'Bring the game table to your people',
-    sub: 'Schools, camps, companies, or cafés — tell us your group size and a date, and we handle the games, the setup, and the fun.',
+    sub: 'Schools, camps, companies, or cafés - tell us your group size and a date, and we handle the games, the setup, and the fun.',
     button: 'Book an event',
     whatsapp: 'Message us on WhatsApp',
   },
@@ -98,20 +98,20 @@ export default {
     faq: [
       {
         q: 'Do people need to know board games?',
-        a: 'Not at all. Most participants have never played a modern board game — our facilitators teach everything in minutes.',
+        a: 'Not at all. Most participants have never played a modern board game, and our facilitators teach everything in minutes.',
       },
       {
         q: 'Where do events happen?',
-        a: 'At your school, office, camp, community center, or a café or restaurant — we bring everything with us.',
+        a: 'At your school, office, camp, community center, or a café or restaurant, and we bring everything with us.',
       },
       {
         q: 'Which ages do you work with?',
-        a: 'Our events are for ages 12 and up — youth, women, and seniors — with games matched to each group.',
+        a: 'Our events are for youth, women, and seniors aged 12 and up, with games matched to each group.',
       },
     ],
   },
   footer: {
-    blurb: 'Non-formal education through board games — workshops, school and youth programs, company events, and tournaments in Jerusalem.',
+    blurb: 'Non-formal education through board games - workshops, school and youth programs, company events, and tournaments in Jerusalem.',
     contactHeading: 'Say hello',
     pagesHeading: 'Sections',
     rights: 'All rights reserved.',

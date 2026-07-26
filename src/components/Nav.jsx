@@ -48,8 +48,8 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
         <a href="#home" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <img src="/brand-mark.png" alt="" className="h-9 w-9" />
-          <span className="font-display text-lg font-extrabold leading-none sm:text-xl">
-            {lang === 'ar' ? 'بي إديوكيشن' : 'Bee Education'}
+          <span dir="ltr" className="font-display text-lg font-extrabold leading-none sm:text-xl">
+            Bee Education
           </span>
         </a>
 

@@ -3,15 +3,15 @@ import contact from '../data/contact'
 import sections from '../data/sections'
 
 export default function Footer() {
-  const { t, lang } = useLang()
+  const { t } = useLang()
   return (
     <footer className="border-t-4 border-ink bg-ink text-board">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <img src="/brand-mark.png" alt="" className="h-8 w-8" />
-            <span className="font-display text-lg font-extrabold">
-              {lang === 'ar' ? 'بي إديوكيشن' : 'Bee Education'}
+            <span dir="ltr" className="font-display text-lg font-extrabold">
+              Bee Education
             </span>
           </div>
           <p className="max-w-xs text-sm text-board/70">{t.footer.blurb}</p>
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col items-center gap-1 border-t border-board/15 py-4 text-center">
         <p className="text-xs text-board/50">
-          © {new Date().getFullYear()} Bee Education — {t.footer.rights}
+          © {new Date().getFullYear()} Bee Education, {t.footer.rights}
         </p>
         <a
           href="https://github.com/AbdelrahmanSalhab"

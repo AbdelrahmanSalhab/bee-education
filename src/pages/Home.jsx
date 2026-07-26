@@ -11,7 +11,7 @@ import { Float, Reveal, TokenCard } from '../components/motion'
 import { DieSticker, MeepleSticker, CardsSticker, BeeHexSticker, stickerByName } from '../components/Stickers'
 
 function Hero() {
-  const { t, lang } = useLang()
+  const { t } = useLang()
   return (
     <section id="home" className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 text-center sm:px-6 sm:pt-24">
       <Float className="absolute start-4 top-10 hidden md:block" rotate={7} duration={7}>
@@ -29,12 +29,12 @@ function Hero() {
 
       <Reveal className="flex flex-col items-center gap-6">
         <img
-          src="/brand-logo.png"
-          alt="BEE"
-          className="h-44 w-auto sm:h-56"
+          src="/brand-mark.png"
+          alt=""
+          className="h-44 w-44 sm:h-56 sm:w-56"
         />
-        <h1 className="font-display text-4xl font-extrabold sm:text-5xl">
-          {lang === 'ar' ? 'بي إديوكيشن' : 'Bee Education'}
+        <h1 dir="ltr" className="font-display text-4xl font-extrabold sm:text-5xl">
+          Bee Education
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-ink-soft sm:text-xl">{t.hero.sub}</p>
         <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
