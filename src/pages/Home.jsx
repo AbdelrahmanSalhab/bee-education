@@ -101,25 +101,29 @@ function Offer() {
 // Everything lives on one page; each `id` below is a nav destination.
 export default function Home() {
   return (
-    <div className="relative overflow-hidden">
-      <BoardTrack />
+    <div className="overflow-hidden">
+      <Hero />
+      {/* The track starts below the hero: it draws from its own top edge, so
+          spanning the hero would paint the line across the brand mark. */}
       <div className="relative">
-        <Hero />
-        <section id="events">
-          <Offer />
-          <HowItWorks />
-        </section>
-        <section id="about">
-          <About />
-          <ClientLogos />
-        </section>
-        <section id="gallery">
-          <PhotoGallery />
-        </section>
-        <Faq />
-        <section id="contact">
-          <CTA />
-        </section>
+        <BoardTrack />
+        <div className="relative">
+          <section id="events">
+            <Offer />
+            <HowItWorks />
+          </section>
+          <section id="about">
+            <About />
+            <ClientLogos />
+          </section>
+          <section id="gallery">
+            <PhotoGallery />
+          </section>
+          <Faq />
+          <section id="contact">
+            <CTA />
+          </section>
+        </div>
       </div>
     </div>
   )
