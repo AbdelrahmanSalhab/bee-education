@@ -69,6 +69,9 @@ export default {
       'Learning the rules together',
       'Every board tells a story',
     ],
+    swipeHint: 'Swipe or tap the deck to see more',
+    prev: 'Previous photo',
+    next: 'Next photo',
   },
   cta: {
     title: 'Bring the game table to your people',
